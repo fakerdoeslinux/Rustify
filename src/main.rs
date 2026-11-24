@@ -105,7 +105,7 @@ fn write_default_config() -> Result<PathBuf> {
 }
 
 fn find_librespot() -> Result<String> {
-    which("librespot").ok_or_else(|| anyhow!("librespot not found on PATH - cargo install librespot --locked"))
+    which("librespot").map_err(|_| anyhow!("librespot not found on PATH - cargo install librespot"))
 }
 
 fn which(name: &str) -> Result<String> {
