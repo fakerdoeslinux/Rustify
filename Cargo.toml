@@ -1,0 +1,13 @@
+[package]
+name = "rustify"
+version = "0.1.0"
+edition = "2021"
+description = "Headless Spotify Connect sink manager written in Rust"
+license = "MIT"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+dirs = "6"
+serde = { version = "1", features = ["derive"] }
+toml = "0.8"
